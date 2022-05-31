@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #nav{
+height: 80px;
+display: flex;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+padding: 0px 10px;
+align-items: center;
+justify-content: space-around;
+        }
+        #nav>div{
+            display: flex;
+            /* justify-content: space-around;
+            align-items: center; */
+        }
+        #nav>div:nth-child(2){
+            justify-content: space-between;
+            /* align-items: center; */
+            width: 45%;
+    }
+    #nav>div:nth-child(1){
+background-color: rgb(80, 17, 138);
+align-items: center;
+height: 100%;
+color: white;
+padding: 0px 15px;
+
+    }
+    #nav>div:nth-child(2)>h2:hover{
+        cursor: pointer;
+        color: blueviolet;
+    }
+        #main{
+               margin-top: 50px; 
+               display: flex;
+               width: 90%;
+               /* margin: auto; */
+               margin-inline: auto;
+               margin: 50px auto;
+            }
+
+            #main>div{
+                width: 45%;
+                justify-content: space-between;
+            }
+            #main>div:nth-child(1)>h4{
+                color: rgb(76, 113, 207);
+            margin-bottom: 10px;
+            }
+            #main>div:nth-child(1)>h1{
+                font-size:45px ;
+                margin-bottom: 30px;
+            }
+
+            #main>div:nth-child(1)>p{
+            font-size: 18px;
+             line-height:25px;
+             margin-top: 10px;
+
+
+            }
+            p{
+                color: gray;
+            }
+
+            /* right portion */
+            #main>div:nth-child(2)>div{
+                display: flex;
+                will-change: 40%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 5% 3% 10% 5%;
+
+            }
+            #main>div:nth-child(2)>div>img{
+                width: 100px;
+            }
+            #box{
+                width: 30%;
+                display: flex;
+                margin-left: 100px;
+                
+            }
+           
+            #div2>img{
+                margin-top: 30px;
+            }
+            #left{
+                height: 200px;
+                width: 100%;
+                display: flex;
+                margin-top: 40px;
+            }
+            #left>img{
+                width: 50%;
+                height: 100%;
+            }
+            h3{
+                
+                justify-content: center;
+                align-items: center;
+                margin-top: 80px;
+                margin-left: 20px;
+            }
+            #div1>div{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+padding: 20px;
+            }
+            #div2>div{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+padding: 20px;
+            }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+      <div>
+          <h1>studylab</h1>
+      </div>
+      <div>
+          <h2>Home</h2>
+          <h2>About</h2>
+          <h2>Course</h2>
+          <h2>Instructor</h2>
+          <h2>Blog</h2>
+          <h2>Contact</h2>
+      </div>  
+    </div>
+    <div id="main"> 
+<div>
+    <h4>WELCOM TO STUDYLAB</h4>
+    <h1>We Are Studylab An Online Learning Center</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quidem fuga accusantium distinctio? Delectus, eos unde. Repellendus doloremque </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio quas quisquam eaque. Itaque rerum eligendi nam, debitis totam modi corrupti?</p>
+    
+    <div id="left">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.dkD381PM_fJPH8mfbv2GbgHaEZ&pid=Api&P=0&w=336&h=199" alt="">
+        <h3>Learn Anything From Studylab,watch Video</h3>
+    </div>
+    </div>
+    <div id="box">
+        <div id="div1">
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDyTg0tIxH06FU7z8uTtlhVrnLtOEOsUbhLg&usqp=CAU" alt="">
+        <h2>Top quality content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, nesciunt?</p>
+    </div>
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDyTg0tIxH06FU7z8uTtlhVrnLtOEOsUbhLg&usqp=CAU" alt="">
+        <h2>Top quality content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, nesciunt?</p>
+    </div>
+</div>
+<div id="div2">
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDyTg0tIxH06FU7z8uTtlhVrnLtOEOsUbhLg&usqp=CAU" alt="">
+        <h2>Top quality content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, nesciunt?</p>
+    </div>
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDyTg0tIxH06FU7z8uTtlhVrnLtOEOsUbhLg&usqp=CAU" alt="">
+        <h2>Top quality content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, nesciunt?</p>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+</html>
