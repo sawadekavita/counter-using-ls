@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-right: 10px;
+            border-radius: 5px;
+            height: 40px;
+            padding: 5px 20px;
+        
+            border:transparent;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var btnArr = [
+        {name:"primary",color:"white", bgcolor:"blue"},
+        {name:"secondary",color:"white", bgcolor:"grey"},
+        {name:"warning",color:"white", bgcolor:"red"},
+        {name:"danger",color:"white", bgcolor:"yellow"},
+        {name:"info",color:"white", bgcolor:"cyan"},
+        {name:"light",color:"white", bgcolor:"wheat"},
+        {name:"success",color:"white", bgcolor:"green"},
+        {name:"dark",color:"white", bgcolor:"black"},
+        {name:"link",color:"blue", bgcolor:"white"},
+       
+    ];
+   
+
+   btnArr.forEach(function (el){
+    let btn = document.createElement("button")
+   btn.innerText=el.name;
+   btn.style.backgroundColor=el.bgcolor;
+   btn.style.color=el.color;
+   document.querySelector("body").append(btn);
+
+   });
+
+
+</script>

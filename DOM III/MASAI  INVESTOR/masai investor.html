@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+       #container{
+display: grid;
+grid-template-columns:repeat(4,1fr) ;
+grid-template-rows: repeat(2,auto);
+gap:20px;
+width: 80%;
+margin: auto;
+        }
+        div>img:first-child{
+            width: 100%;
+            height: 70%;
+        }
+        img+h2{
+            justify-content: center;
+            text-align: center;
+        } 
+             
+
+
+       div>img:last-child{
+            
+             margin: auto; 
+             height: 100px;
+            width: 200px; 
+             margin-top: -40px; 
+             padding-bottom: 20px;
+             margin-left: 30px;
+            
+             
+             
+        }
+        h2+h3{
+            justify-content: center;
+            text-align: center;
+            color: gray;
+            margin-top: -10px;
+        }
+        #container>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div id ="container"></div>
+</body>
+</html>
+<script>
+    let investors =[
+        {name:"Vijay Shekhar Sharma",
+        role:"Founder & CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        
+        {name:"Kunal Shah",
+        role:"Founder",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+
+        {name:"amrish rau",
+        role:"CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"},
+
+        {name:"sampad swain",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"},
+
+        {name:"ankush sachdev",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg"},
+
+        {name:"bhanu pratap singh",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/bhanu_pratap_singh_sharechat_11fdd7b47a.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg"},
+
+        {name:"farid ashan",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/farid_ahsan_sharechat_1251f28141.png",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg"},
+
+        {name:"amit agrawal",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Amit_Kumar_Agarwal_Nobroker_a8a279ad91.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/nobroker_rect_28c9778c30.svg"},
+
+        {name:"akhil gupta",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Akhil_Gupta_Nobroker_539cd97f6c.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/nobroker_rect_28c9778c30.svg "},
+
+        {name:"saurabh grag",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/saurbh_garg_nobroker_c0c71cc431.jpeg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/nobroker_rect_28c9778c30.svg"},
+
+        {name:"vipin pathak",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vipin_Pathak_Care24_acd02cd173.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/care24_1164f7a2cd.png"},
+        
+        {name:"ramakant sharma",
+        role:"cofounder and CEO",
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Ramakant_Sharma_livespace_0308e3627d.jpg",
+        companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/care24_1164f7a2cd.png"},
+        
+        
+
+        ]
+
+        investors.map(function(el) {
+            //creating child box
+            let box = document.createElement("div");
+            // creating img
+            let avatar =document.createElement("img");
+            avatar.setAttribute("src",el.image)
+            box.append(avatar)
+            let companyRole =document.createElement("h3");
+            companyRole.innerText=el.role
+            box.append( companyRole)
+
+            let mentorsName = document.createElement("h2")
+            mentorsName.innerText =el.name;
+            box.append(avatar,mentorsName)
+
+            let Logo = document.createElement("img")
+            Logo.setAttribute("src",el.companyLogo)
+            box.append(avatar,mentorsName, companyRole,Logo)
+
+            document.querySelector("#container").append(box);
+        });
+
+</script>
